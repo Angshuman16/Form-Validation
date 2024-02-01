@@ -9,7 +9,7 @@
     rgba(255, 0, 95, 1) 100%
   );
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   display: flex;
   place-items: center;
 }
