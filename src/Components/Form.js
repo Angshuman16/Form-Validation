@@ -3,6 +3,7 @@ import PersonalInfo from './PersonalInfo';
 import Eductaion from './Eductaion';
 import Employment from './Employment';
 import { checkValidateData } from '../utils/checkValidateData';
+import Details from './Details';
 
 
 function Form() {
@@ -60,16 +61,24 @@ function Form() {
   }
 
   return (
+   <div className='App'>
+    <span className='display'>
+     <pre>{JSON.stringify(formdata,undefined,2)}</pre>
+     </span>
     <form className='form' onSubmit={handleformsubmission} >
     <div className='progressbar'>
       <div style={{width: page ==0?"33.33%":page==1?"66.66%":"100%"}}></div>
     </div>
+   
     <div className='form-container'>
-
+    
       <div className='header'>
         <h1>{navigation[page]}</h1>
       </div>
       <div className='body'>
+
+     
+       
         {PageDisplay()}
       </div>
       <div className='footer'>
@@ -111,7 +120,17 @@ function Form() {
       </div>
     </div>
     
+   
+    
    </form>
+   </div>
+
+   
+
+  
+
+
+   
   )
 }
 
